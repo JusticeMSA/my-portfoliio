@@ -1,0 +1,133 @@
+/*=========================
+    COLORS
+==========================*/
+$yellow: #F4E914;
+$darkGrey: #1C1C1C;
+$lightGrey: #E5E5E5;
+
+.Header{
+    font-family: Raleway;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: $darkGrey;
+    opacity: 0.99;
+    
+    .flex-container{
+        height: 60px;
+        padding-left: 6%;
+        padding-right: 6%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo a img{
+            width: 110px;
+        }
+
+        .navigation{
+            .nav-links{
+                display: block;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                height: 0;
+                background-color: $darkGrey;
+                overflow: hidden;
+                transition: 0.8s;
+                
+                ul{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+
+                    li{
+                        margin-bottom: 20px;
+
+                        a{
+                            color: $lightGrey !important;
+                            font-family: openSansRegular, sans-serif;
+                            transition: 1s;
+
+                            &:hover{
+                                color: $yellow !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .menu-open{
+                height: calc(100vh - 60px);
+            }
+            .menu-btn{
+                width: 25px;
+                height: 18px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                div{
+                    width: 100%;
+                    height: 2px;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px){
+    .Header{
+        .flex-container{
+            height: 70px;
+
+            .logo a img{
+                width: 140px;
+            }
+            .navigation{
+                .nav-links{
+                    display: block;
+                    position: relative;
+                    height: fit-content;
+                    top: 0;
+                    transition: none;
+                    background-color: transparent;
+
+                    ul{
+                        position: relative;
+                        transform: none;
+                        top: auto;
+                        left: auto;
+
+                        li{
+                            display: inline;
+                            padding: 0 10px;
+
+                            a{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .menu-btn{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 992px){
+    .section-one{
+        .flex-container{
+            .right{
+                h1{
+                    font-size: 60px !important;
+                }
+            }
+        }
+    }
+}

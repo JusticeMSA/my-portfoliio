@@ -1,0 +1,104 @@
+@import '../../theme';
+
+/*=========================
+COLORS
+==========================*/
+// theme.$yellow: #F4E914;
+// theme.$lightYellow: #fff64a;
+// theme.$darkGrey: #1C1C1C;
+// theme.$midLighGrey: #3b3b3b;
+// $lightGrey: #E5E5E5;
+
+.section-one{
+    background-color: $darkGrey;
+    padding-bottom: 50px;
+    position: relative;
+    
+    .flex-container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        width: 100%;
+        padding-top: 20vh;
+        
+        .left{
+            img{
+                width: 50%;
+            }
+        }
+        .right{
+            margin-bottom: 30px;
+            h1{
+                color: #fff;
+                font-size: 40px;
+
+                span{
+                    color: $yellow;
+                }
+            }
+            p{
+                font-family: robotoMedium, sans-serif;
+                color: #fff;
+                margin-top: 15px;
+                font-size: 13px;
+            }
+            .yellow-btn{
+                @include yellow-btn;
+            }
+        }
+    }
+    
+
+}
+
+@media screen and (min-width: 500px){
+    .section-one{
+        .flex-container{
+            flex-direction: row;
+            padding-top: 20vh;
+
+            .left{
+                text-align: center;
+                flex-basis: 50%;
+
+                img{
+                    width: 60%;
+                }
+            }
+            .right{
+                flex-basis: 50%;
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+        .portfolio-btn{
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px){
+    .remove-break{
+        display: none;
+    }
+    .section-one{
+        height: 100vh;
+        .flex-container{
+            height: 100vh;
+            padding-top: 30vh;
+
+            .left{
+                img{
+                    width: 50%;
+                }
+            }
+
+            .right{
+                h1{
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+}
