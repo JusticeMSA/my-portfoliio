@@ -1,0 +1,45 @@
+.Form{
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    padding: 0;
+    margin-bottom: 50px;
+
+    .text-input{
+        border: none;
+        height: 20px;
+        width: 200px;
+    }
+    .button{
+        height: 24px;
+        width: 24px;
+        border: none;
+        margin: 0;
+        background: #fff;
+        cursor: pointer;
+        .fas{
+            color: #ff416c;
+        }
+    }
+    select{
+        height: 24px;
+        margin-left: 15px;
+
+        &::after{
+            content: "/25BC";
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1rem;
+            background: #ff416c;
+            cursor: pointer;
+            pointer-events: none;
+        }
+    }
+    .text-input,select,.button{
+        border: 1px solid transparent;
+        &:focus{
+            outline: none;
+        }
+    }
+}
