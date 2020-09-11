@@ -12,7 +12,7 @@
             max-width: 150px;
             display: block;
             margin: auto;
-            box-shadow: 2px 2px 2px 0px rgb(192, 192, 192);
+            box-shadow: 2px 2px 2px 2px rgb(192, 192, 192);
         }
         .p-container{
             text-align: center;
@@ -24,13 +24,12 @@
         }
     }
 
-    .section-btn{
-        bottom: 10px;
-        color: $darkGrey;
-    }
-    .section-btn::before{
-        background: $yellow;
-    }
+    .yellow-effect-btn{
+        @include yellow-effect-btn;
+        position: absolute;
+        bottom: 6vh;
+        right: 100px;
+    }               
 }
 @media screen and (min-width: 400px) and (max-width: 700px){
     .section-two{

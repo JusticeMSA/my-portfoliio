@@ -1,0 +1,62 @@
+@import '../../theme';
+
+/*=========================
+    SECTION LAST
+==========================*/
+
+.last-section{
+    padding-bottom: 50px;
+    form{
+        width: 280px;
+        margin: auto;
+
+        #name, #email, #message{
+            border: solid 1px $lightGrey;
+            width: 100%;
+            margin-bottom: 15px;
+            font-family: openSansRegular, sans-serif;
+            padding: 5px;
+            color: rgb(116, 116, 116);
+            font-size: 16px;
+        }
+        #name:focus, #email:focus, #message:focus{
+           border-color: $yellow;
+        }
+        #name, #email{
+            height: 40px;
+        }
+
+        button{
+            background-color: $yellow;
+            color: $darkGrey;
+            font-family: robotoMedium, sans-serif;
+            border: none;
+            padding: 7px 30px;
+            display: block;
+            margin: auto;
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (min-width: 500px){
+    .section-four{
+        form{
+            width: 70%;
+        }
+    }
+}
+@media screen and (min-width: 700px){
+    .section-four{
+        form{
+            width: 60%;
+        }
+    }
+}
+@media screen and (min-width: 992px){
+    .section-four{
+        form{
+            width: 45%;
+        }
+    }
+}

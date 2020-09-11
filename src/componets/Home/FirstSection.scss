@@ -23,7 +23,10 @@ COLORS
         
         .left{
             img{
-                width: 50%;
+                width: 60vw !important;
+                position: absolute;
+                left: -10%;
+                bottom: 0;
             }
         }
         .right{

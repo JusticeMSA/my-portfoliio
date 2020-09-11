@@ -1,6 +1,7 @@
 import React from 'react';
-import './SecondSection.scss';
 import '../../_theme.scss';
+import './SecondSection.scss';
+import photo from '../../images/my-photo.png';
 
 
 const SecondSection = () =>{
@@ -9,7 +10,7 @@ const SecondSection = () =>{
             <div className="section-two">
                 <h2>WHO AM I?</h2>
                 <div className="container">
-                    <img src="assets/images/+27 74 311 3947 20190819_205559.jpg" alt=""/>
+                    <img src={photo} alt=""/>
                     <div className="p-container">
                         <p>My name is Justice Mlangeni. I am a front-end developer 
                             based in  Benoni, South Africa. I fell inlove with software 
@@ -24,7 +25,7 @@ const SecondSection = () =>{
                         </p>
                     </div>
                 </div>
-                <a href="/" className="section-btn">READ MORE</a>
+                <a href="/" className="yellow-effect-btn">READ MORE</a>
             </div>
         </section>
     );
